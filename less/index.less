@@ -38,6 +38,10 @@ html {
     font-size: @size;
     font-family: @family;
 }
+.footerfontsizefamily (@footersize, @footerfamily) {
+    font-size: @footersize;
+    font-family: @footerfamily
+}
 
 .defaultMarginLeft() {
         width: 55%;
@@ -169,8 +173,7 @@ div.img-content2 {
 
 section.content-destination {
     .displayFlex(center, column, center);
-    .genborder();
-    .margintopbottom(20%, 10%);
+    .margintopbottom(9%, 1%);
 
     h2 {
         .h2fontsizefamily (4rem, 'Indie Flower');
@@ -183,6 +186,20 @@ section.content-destination {
     }
     img {
         border-radius: 50px;
-        .widthHeight(95%, 300px);
+        .widthHeight(75%, 300px);
     }
+}
+section.content-pick {
+    .genborder();
+    .displayFlex(space-evenly, row, center);
+    .marginleftright(13%, 13%);
+     h4 {
+        .footerfontsizefamily (2.8rem, 'Indie Flower');
+     }
+     p {
+        .psize1();
+        text-align: left
+        .marginleftright(13%, 13%);
+        .margintopbottom(-2%, 1%);
+     }
 }
