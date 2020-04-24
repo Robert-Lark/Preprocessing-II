@@ -1,9 +1,168 @@
 // Follow the order in the readme
 
-@import: "variables";
-@import: "mixins";
-@import: "reset";
-@import: "global";
-@import: "home-page";
-@import: "navigation";
-@import: "footer";
+@import: 'variables';
+@import: 'mixins';
+@import: 'reset';
+@import: 'global';
+@import: 'navigation';
+@import: 'footer';
+@import: 'home-page';
+
+html {
+ font-size: 62.5%;   
+ box-sizing: border-box;
+}
+
+.displayFlex(@justify, @direction, @align) {
+    Display: flex;
+    flex-direction: @direction;
+    Justify-Content: @justify;	
+    Align-items: @align;	
+}			
+
+.widthHeight(@width, @height) {
+    width: @width;
+    height: @height;
+}
+.marginleftright(@marginleft, @marginright){
+    margin-left: @marginleft;
+    margin-right: @marginright;
+}
+
+.margintopbottom(@margintop, @marginbottom){
+    margin-top: @margintop;
+    margin-bottom: @marginbottom;
+}
+
+.h2fontsizefamily (@size, @family) {
+    font-size: @size;
+    font-family: @family;
+}
+
+.defaultMarginLeft() {
+        width: 55%;
+        margin-left: 5%;
+}
+
+.psize1() {
+font-size: 2rem;
+}
+
+.genborder() {
+    border: 2px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.topnav {
+    .displayFlex(flex-end, auto, auto);
+}
+
+
+section.header {
+    div.funbuslarge {
+        .defaultMarginLeft();
+        p {
+            .widthHeight(55, auto);
+            margin: 5% 10% 0% 0%;
+            font-size: 6rem;
+            font-family: 'Indie Flower', cursive;
+        }
+    }
+    nav {
+        .displayFlex(space-evenly, auto, center);
+        .widthHeight(50%, 164px);
+        a {
+            text-decoration: none;
+            .psize1();
+            color: black;
+        }
+    }    
+}
+
+div.banner { 
+    .displayFlex(center, auto, auto);   
+    img{
+        .widthHeight(90%, 90%);
+    }
+}
+
+section.welcome {
+    .defaultMarginLeft();
+
+    h2 {
+        .h2fontsizefamily (4rem, 'Indie Flower');
+    }
+    div.welcomecontent {
+        
+        p{
+        .psize1();
+        .marginleftright(.5%, -65.2%);
+        }
+    }
+}
+
+section.content-section{
+    
+    div.text-content {
+        .displayFlex(space-evenly, column, auto);
+        .marginleftright(5%, 3%);
+        h2 {
+            .h2fontsizefamily (4rem, 'Indie Flower');
+        }
+    
+        p {
+        .psize1();
+        .marginleftright(0%, 50%);
+        
+    }
+}
+div.img-content {
+    .displayFlex(flex-end, column, auto);
+    .marginleftright(50%, 6%);
+    .margintopbottom(-15%, 0%);
+    .displayFlex(space-evenly, auto, auto);
+
+    img {
+        border-radius: 50px;
+    }
+}
+
+}
+section.inverse-content {
+    
+    div.text-content2 {
+        .marginleftright(35%, -35%);
+
+        h2 {
+            .h2fontsizefamily (4rem, 'Indie Flower');
+        }
+    
+        p {
+        .psize1();
+        .marginleftright(0%, 50%);
+        
+    }
+}
+}
+div.img-content2 {
+    .displayFlex(flex-end, row, auto);
+    .marginleftright(50%, 6%);
+    .margintopbottom(-15%, 0%);
+    .displayFlex(space-evenly, auto, auto);
+
+    img {
+        border-radius: 50px;
+    }
+}

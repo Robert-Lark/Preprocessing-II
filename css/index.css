@@ -1,0 +1,117 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+div.topnav {
+  Display: flex;
+  flex-direction: auto;
+  Justify-Content: flex-end;
+  Align-items: auto;
+}
+section.header div.funbuslarge {
+  width: 55%;
+  margin-left: 5%;
+}
+section.header div.funbuslarge p {
+  width: 55;
+  height: auto;
+  margin: 5% 10% 0% 0%;
+  font-size: 6rem;
+  font-family: 'Indie Flower', cursive;
+}
+section.header nav {
+  Display: flex;
+  flex-direction: auto;
+  Justify-Content: space-evenly;
+  Align-items: center;
+  width: 50%;
+  height: 164px;
+}
+section.header nav a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+}
+div.banner {
+  Display: flex;
+  flex-direction: auto;
+  Justify-Content: center;
+  Align-items: auto;
+}
+div.banner img {
+  width: 90%;
+  height: 90%;
+}
+section.welcome {
+  width: 55%;
+  margin-left: 5%;
+}
+section.welcome h2 {
+  font-size: 4rem;
+  font-family: 'Indie Flower';
+}
+section.welcome div.welcomecontent p {
+  font-size: 2rem;
+  margin-left: 0.5%;
+  margin-right: -65.2%;
+}
+section.content-section div.text-content {
+  Display: flex;
+  flex-direction: column;
+  Justify-Content: space-evenly;
+  Align-items: auto;
+  margin-left: 5%;
+  margin-right: 3%;
+}
+section.content-section div.text-content h2 {
+  font-size: 4rem;
+  font-family: 'Indie Flower';
+}
+section.content-section div.text-content p {
+  font-size: 2rem;
+  margin-left: 0%;
+  margin-right: 50%;
+}
+section.content-section div.img-content {
+  flex-direction: column;
+  Justify-Content: flex-end;
+  margin-left: 50%;
+  margin-right: 6%;
+  margin-top: -15%;
+  margin-bottom: 0%;
+  Display: flex;
+  flex-direction: auto;
+  Justify-Content: space-evenly;
+  Align-items: auto;
+}
+section.content-section div.img-content img {
+  border-radius: 50px;
+}
+section.inverse-content div.text-content2 {
+  margin-left: 35%;
+  margin-right: -35%;
+}
+section.inverse-content div.text-content2 h2 {
+  font-size: 4rem;
+  font-family: 'Indie Flower';
+}
+section.inverse-content div.text-content2 p {
+  font-size: 2rem;
+  margin-left: 0%;
+  margin-right: 50%;
+}
+div.img-content2 {
+  flex-direction: row;
+  Justify-Content: flex-end;
+  margin-left: 50%;
+  margin-right: 6%;
+  margin-top: -15%;
+  margin-bottom: 0%;
+  Display: flex;
+  flex-direction: auto;
+  Justify-Content: space-evenly;
+  Align-items: auto;
+}
+div.img-content2 img {
+  border-radius: 50px;
+}
