@@ -94,7 +94,9 @@ section.header {
         }
     }    
 }
-
+div.border0 {
+    border-bottom: 1px dashed black;
+}
 div.banner { 
     .displayFlex(center, auto, auto);   
     img{
@@ -116,7 +118,11 @@ section.welcome {
         }
     }
 }
-
+div.border1 {
+    border-bottom: 1px dashed black;
+    .widthHeight(90%, 0%);
+    .marginleftright(5%, 3%);
+}
 section.content-section{
     
     div.text-content {
@@ -137,7 +143,7 @@ div.img-content {
     .marginleftright(50%, 6%);
     .margintopbottom(-15%, 0%);
     .displayFlex(space-evenly, auto, auto);
-
+    
     img {
         border-radius: 50px;
         }
@@ -146,35 +152,44 @@ div.img-content {
 section.inverse-content {
     
     div.text-content2 {
-        .marginleftright(50%, -45%);
+        .widthHeight(45%, auto);
+        .marginleftright(50%, auto);
         .margintopbottom(-20%, 0%);
         
         h2 {
+            .widthHeight(45%, auto);
             .h2fontsizefamily (4rem, 'Indie Flower');
         }
     
         p {
         .psize1();
-        .marginleftright(0%, 50%);
+        .marginleftright(0%, 0%);
+        }
+    }
+    div.img-content2 {
+        .displayFlex(flex-end, row, auto);
+        .marginleftright(4%, 50%);
+        .margintopbottom(2%, -15%);
+        .displayFlex(space-evenly, auto, auto);
+    
+        img {
+            border-radius: 50px;
+            .widthHeight(95%, 300px);
         }
     }
 }
-div.img-content2 {
-    .displayFlex(flex-end, row, auto);
-    .marginleftright(4%, 50%);
-    .margintopbottom(2%, -15%);
-    .displayFlex(space-evenly, auto, auto);
-
-    img {
-        border-radius: 50px;
-        .widthHeight(95%, 300px);
-    }
+div.border2 {
+    border-bottom: 1px dashed black;
+    .widthHeight(90%, 100px);
+    .marginleftright(5%, 3%);
 }
 
 section.content-destination {
     .displayFlex(center, column, center);
-    .margintopbottom(9%, 1%);
-
+    .marginleftright(5%, 1%);
+    border-bottom: 1px dashed black;
+    .widthHeight(85%, 100%);
+    padding-bottom: 35px;
     h2 {
         .h2fontsizefamily (4rem, 'Indie Flower');
     }
@@ -190,7 +205,6 @@ section.content-destination {
     }
 }
 section.content-pick {
-    .genborder();
     .displayFlex(space-evenly, row, center);
     .marginleftright(13%, 13%);
      h4 {
@@ -202,4 +216,22 @@ section.content-pick {
         .marginleftright(13%, 13%);
         .margintopbottom(-2%, 1%);
      }
+     div.btn {
+        background-color: darkcyan;
+        border-radius: 50px;
+        .widthHeight(70%, 35px);
+        .marginleftright (3%, 23%);
+        .margintopbottom(2%, 1%);
+        text-align: center;
+        color: white;
+        .h2fontsizefamily (2.5rem, 'Times new roman');
+        }
+}
+footer.footer {
+    border-top: 1px dashed black;
+    text-align: center;
+    background-color: wheat;
+    .h2fontsizefamily (1.5rem, 'Times new roman');
+    .widthHeight(auto, 65px);
+    .margintopbottom(2%, 1%);
 }
