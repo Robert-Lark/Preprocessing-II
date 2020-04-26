@@ -2,44 +2,76 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
-div.topnav {
+@media (max-width: 500px) {
+  border: 2px solid black;
+}
+section.header div.topnav {
   Display: flex;
-  flex-direction: auto;
   Justify-Content: flex-end;
+  flex-direction: auto;
   Align-items: auto;
 }
-section.header div.funbuslarge {
+@media (max-width: 500px) {
+  section.header div.topnav {
+    Display: flex;
+    Justify-Content: center;
+    flex-direction: column;
+    Align-items: center;
+    width: 55;
+    height: 120px;
+  }
+}
+section.header div.topnav div.funbuslarge {
   width: 55%;
   margin-left: 5%;
 }
-section.header div.funbuslarge p {
+section.header div.topnav div.funbuslarge p {
   width: 55;
   height: auto;
   margin: 5% 10% 0% 0%;
   font-size: 6rem;
   font-family: 'Indie Flower', cursive;
 }
-section.header nav {
+@media (max-width: 500px) {
+  section.header div.topnav div.funbuslarge p {
+    text-align: center;
+    font-size: 2.8rem;
+    font-family: 'Indie Flower';
+  }
+}
+section.header div.topnav nav {
   Display: flex;
-  flex-direction: auto;
   Justify-Content: space-evenly;
+  flex-direction: auto;
   Align-items: center;
   width: 50%;
   height: 164px;
 }
-section.header nav a {
+@media (max-width: 500px) {
+  section.header div.topnav nav {
+    margin-top: 2%;
+    margin-bottom: -5%;
+    width: 90%;
+    height: auto;
+  }
+}
+section.header div.topnav nav a {
   text-decoration: none;
   font-size: 2rem;
   color: black;
 }
-div.border0 {
-  border-bottom: 1px dashed black;
+@media (max-width: 500px) {
+  section.header div.topnav nav a {
+    font-size: 1.8rem;
+    font-family: auto;
+  }
 }
 div.banner {
   Display: flex;
-  flex-direction: auto;
   Justify-Content: center;
+  flex-direction: auto;
   Align-items: auto;
+  border-top: 1px dashed black;
 }
 div.banner img {
   width: 90%;
@@ -57,18 +89,13 @@ section.welcome div.welcomecontent p {
   font-size: 2rem;
   margin-left: 0.5%;
   margin-right: -65.2%;
-}
-div.border1 {
+  padding-bottom: 50px;
   border-bottom: 1px dashed black;
-  width: 90%;
-  height: 0%;
-  margin-left: 5%;
-  margin-right: 3%;
 }
 section.content-section div.text-content {
   Display: flex;
-  flex-direction: column;
   Justify-Content: space-evenly;
+  flex-direction: column;
   Align-items: auto;
   margin-left: 5%;
   margin-right: 3%;
@@ -83,15 +110,15 @@ section.content-section div.text-content p {
   margin-right: 50%;
 }
 section.content-section div.img-content {
-  flex-direction: column;
   Justify-Content: flex-end;
+  flex-direction: column;
   margin-left: 50%;
   margin-right: 6%;
   margin-top: -15%;
   margin-bottom: 0%;
   Display: flex;
-  flex-direction: auto;
   Justify-Content: space-evenly;
+  flex-direction: auto;
   Align-items: auto;
 }
 section.content-section div.img-content img {
@@ -117,15 +144,15 @@ section.inverse-content div.text-content2 p {
   margin-right: 0%;
 }
 section.inverse-content div.img-content2 {
-  flex-direction: row;
   Justify-Content: flex-end;
+  flex-direction: row;
   margin-left: 4%;
   margin-right: 50%;
   margin-top: 2%;
   margin-bottom: -15%;
   Display: flex;
-  flex-direction: auto;
   Justify-Content: space-evenly;
+  flex-direction: auto;
   Align-items: auto;
 }
 section.inverse-content div.img-content2 img {
@@ -142,8 +169,8 @@ div.border2 {
 }
 section.content-destination {
   Display: flex;
-  flex-direction: column;
   Justify-Content: center;
+  flex-direction: column;
   Align-items: center;
   margin-left: 5%;
   margin-right: 1%;
@@ -170,8 +197,8 @@ section.content-destination img {
 }
 section.content-pick {
   Display: flex;
-  flex-direction: row;
   Justify-Content: space-evenly;
+  flex-direction: row;
   Align-items: center;
   margin-left: 13%;
   margin-right: 13%;

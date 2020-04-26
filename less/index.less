@@ -13,10 +13,12 @@ html {
  box-sizing: border-box;
 }
 
+@mobile: ~"(max-width: 500px)";
+
 .displayFlex(@justify, @direction, @align) {
     Display: flex;
-    flex-direction: @direction;
     Justify-Content: @justify;	
+    flex-direction: @direction;
     Align-items: @align;	
 }			
 
@@ -34,13 +36,9 @@ html {
     margin-bottom: @marginbottom;
 }
 
-.h2fontsizefamily (@size, @family) {
+.fontsizefamily (@size, @family) {
     font-size: @size;
     font-family: @family;
-}
-.footerfontsizefamily (@footersize, @footerfamily) {
-    font-size: @footersize;
-    font-family: @footerfamily
 }
 
 .defaultMarginLeft() {
@@ -63,42 +61,64 @@ font-size: 2rem;
 
 
 
-
-
-
-
-
-
-div.topnav {
-    .displayFlex(flex-end, auto, auto);
+@media @mobile {
+.genborder();
 }
+
+
+
+
+
+
+
+
 
 
 section.header {
-    div.funbuslarge {
-        .defaultMarginLeft();
-        p {
-            .widthHeight(55, auto);
-            margin: 5% 10% 0% 0%;
-            font-size: 6rem;
-            font-family: 'Indie Flower', cursive;
+    div.topnav {
+        .displayFlex(flex-end, auto, auto);
+            @media @mobile {
+                .displayFlex(center, column, center);
+                .widthHeight(55, 120px);
+            }
+        div.funbuslarge {
+            .defaultMarginLeft();
+            p {
+                @media @mobile {
+                text-align: center;
+                .fontsizefamily (2.8rem, 'Indie Flower');
+                }
+                .widthHeight(55, auto);
+                margin: 5% 10% 0% 0%;
+                font-size: 6rem;
+                font-family: 'Indie Flower', cursive;
         }
     }
-    nav {
-        .displayFlex(space-evenly, auto, center);
-        .widthHeight(50%, 164px);
-        a {
-            text-decoration: none;
-            .psize1();
-            color: black;
+        nav {
+            .displayFlex(space-evenly, auto, center);
+            .widthHeight(50%, 164px);
+
+            @media @mobile {
+                .margintopbottom(2%, -5%);
+                .widthHeight(90%, auto);
+            }
+            a {
+                text-decoration: none;
+                .psize1();
+                color: black;
+
+            @media @mobile {
+                .fontsizefamily (1.8rem, auto);
+            }
+                
         }
     }    
 }
-div.border0 {
-    border-bottom: 1px dashed black;
 }
+
 div.banner { 
-    .displayFlex(center, auto, auto);   
+    .displayFlex(center, auto, auto);  
+    border-top: 1px dashed black; 
     img{
         .widthHeight(90%, 90%);
     }
@@ -108,28 +128,26 @@ section.welcome {
     .defaultMarginLeft();
 
     h2 {
-        .h2fontsizefamily (4rem, 'Indie Flower');
+        .fontsizefamily (4rem, 'Indie Flower');
     }
     div.welcomecontent {
         
         p{
         .psize1();
         .marginleftright(.5%, -65.2%);
+        padding-bottom: 50px;
+        border-bottom: 1px dashed black; 
         }
     }
 }
-div.border1 {
-    border-bottom: 1px dashed black;
-    .widthHeight(90%, 0%);
-    .marginleftright(5%, 3%);
-}
+
 section.content-section{
     
     div.text-content {
         .displayFlex(space-evenly, column, auto);
         .marginleftright(5%, 3%);
         h2 {
-            .h2fontsizefamily (4rem, 'Indie Flower');
+            .fontsizefamily (4rem, 'Indie Flower');
         }
     
         p {
@@ -158,7 +176,7 @@ section.inverse-content {
         
         h2 {
             .widthHeight(45%, auto);
-            .h2fontsizefamily (4rem, 'Indie Flower');
+            .fontsizefamily (4rem, 'Indie Flower');
         }
     
         p {
@@ -191,7 +209,7 @@ section.content-destination {
     .widthHeight(85%, 100%);
     padding-bottom: 35px;
     h2 {
-        .h2fontsizefamily (4rem, 'Indie Flower');
+        .fontsizefamily (4rem, 'Indie Flower');
     }
 
     p {
@@ -208,7 +226,7 @@ section.content-pick {
     .displayFlex(space-evenly, row, center);
     .marginleftright(13%, 13%);
      h4 {
-        .footerfontsizefamily (2.8rem, 'Indie Flower');
+        .fontsizefamily (2.8rem, 'Indie Flower');
      }
      p {
         .psize1();
@@ -224,14 +242,14 @@ section.content-pick {
         .margintopbottom(2%, 1%);
         text-align: center;
         color: white;
-        .h2fontsizefamily (2.5rem, 'Times new roman');
+        .fontsizefamily (2.5rem, 'Times new roman');
         }
 }
 footer.footer {
     border-top: 1px dashed black;
     text-align: center;
     background-color: wheat;
-    .h2fontsizefamily (1.5rem, 'Times new roman');
+    .fontsizefamily (1.5rem, 'Times new roman');
     .widthHeight(auto, 65px);
     .margintopbottom(2%, 1%);
 }
