@@ -35,6 +35,14 @@ html {
     margin-top: @margintop;
     margin-bottom: @marginbottom;
 }
+.margintoprightbottomleft(@top, @right, @bottom, @left){
+    margin-top: @top;
+    margin-right: @right;
+    margin-bottom: @bottom;
+    margin-left: @left;
+
+}
+
 
 .fontsizefamily (@size, @family) {
     font-size: @size;
@@ -126,34 +134,46 @@ div.banner {
 
 section.welcome {
     .defaultMarginLeft();
-
-    h2 {
-        .fontsizefamily (4rem, 'Indie Flower');
-    }
-    div.welcomecontent {
-        
-        p{
-        .psize1();
-        .marginleftright(.5%, -65.2%);
-        padding-bottom: 50px;
-        border-bottom: 1px dashed black; 
+        div.welcomecontent {
+            h2 {
+                .fontsizefamily (4rem, 'Indie Flower');
+                    @media @mobile {
+                        .margintoprightbottomleft(7%, -75%, auto, auto);
+                        .fontsizefamily (2.5rem, 'Indie Flower');
+            }
+        }
+            p{
+            .psize1();
+            .marginleftright(.5%, -65.2%);
+            padding-bottom: 5%;
+            border-bottom: 1px dashed black; 
+            @media @mobile {
+                .margintoprightbottomleft(3%, -70%, auto, auto);
+                .fontsizefamily (1.8rem, auto);
+                }
         }
     }
 }
 
 section.content-section{
-    
+   
     div.text-content {
         .displayFlex(space-evenly, column, auto);
         .marginleftright(5%, 3%);
         h2 {
             .fontsizefamily (4rem, 'Indie Flower');
+            @media @mobile {
+                .fontsizefamily (2.5rem, 'Indie Flower');
+                }
         }
     
         p {
         .psize1();
         .marginleftright(0%, 50%);
-        
+        @media @mobile {
+            .margintoprightbottomleft(-2%, 2%, auto, auto);
+            .fontsizefamily (1.8rem, auto);
+            }
     }
 }
 div.img-content {
@@ -161,6 +181,9 @@ div.img-content {
     .marginleftright(50%, 6%);
     .margintopbottom(-15%, 0%);
     .displayFlex(space-evenly, auto, auto);
+    @media @mobile {
+        .margintoprightbottomleft(3%, 5%, -27%, 5%);
+        }
     
     img {
         border-radius: 50px;
@@ -173,15 +196,28 @@ section.inverse-content {
         .widthHeight(45%, auto);
         .marginleftright(50%, auto);
         .margintopbottom(-20%, 0%);
+        @media @mobile {
+            .widthHeight(95%, auto);
+            .margintoprightbottomleft(-172%, 20%, 50%, 5%);
+            }
         
         h2 {
             .widthHeight(45%, auto);
             .fontsizefamily (4rem, 'Indie Flower');
+            @media @mobile {
+                .widthHeight(95%, auto);
+                .margintoprightbottomleft(-90%, 20%, 0%, auto);
+                .fontsizefamily (2.5rem, 'Indie Flower');
+                }
         }
     
         p {
         .psize1();
         .marginleftright(0%, 0%);
+        @media @mobile {
+            .margintoprightbottomleft(0%, 0%, 0%, auto);
+            .fontsizefamily (1.8rem, auto);
+            }
         }
     }
     div.img-content2 {
@@ -189,10 +225,19 @@ section.inverse-content {
         .marginleftright(4%, 50%);
         .margintopbottom(2%, -15%);
         .displayFlex(space-evenly, auto, auto);
+        @media @mobile {
+            .widthHeight(100%, auto);
+            .margintoprightbottomleft(70%, 10%, 50%, 2%);
+            padding-bottom: 90px;
+            }
     
         img {
             border-radius: 50px;
             .widthHeight(95%, 300px);
+            @media @mobile {
+                .widthHeight(93%, 300px);
+            }
+            
         }
     }
 }
@@ -210,12 +255,19 @@ section.content-destination {
     padding-bottom: 35px;
     h2 {
         .fontsizefamily (4rem, 'Indie Flower');
+        @media @mobile {
+            .margintoprightbottomleft(6%, 0%, 4%, -44%);
+            .fontsizefamily (2.5rem, 'Indie Flower');
+            }
     }
-
+    
     p {
         .psize1();
-        .marginleftright(13%, 13%);
-        .margintopbottom(-2%, 1%);
+        .margintoprightbottomleft(-2%, 13%, 1%, 13%);
+        @media @mobile {
+            .margintoprightbottomleft(0%, 0%, 0%, auto);
+            .fontsizefamily (1.8rem, auto);
+            }
     }
     img {
         border-radius: 50px;
