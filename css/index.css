@@ -558,9 +558,9 @@ html {
 @media (max-width: 1600px) and (max-width: 500px) {
   .container section.content-pick h4 {
     margin-top: 6%;
-    margin-right: 0%;
+    margin-right: -5%;
     margin-bottom: 14%;
-    margin-left: 0%;
+    margin-left: -9%;
     font-size: 2.5rem;
     font-family: 'Indie Flower';
   }
@@ -568,9 +568,9 @@ html {
 @media (max-width: 1600px) and (max-width: 500px) {
   .container section.content-pick p {
     margin-top: -10%;
-    margin-right: 0%;
+    margin-right: -50%;
     margin-bottom: 5%;
-    margin-left: auto;
+    margin-left: -50%;
     font-size: 1.8rem;
     font-family: auto;
   }
