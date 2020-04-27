@@ -1,14 +1,48 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  background: #FFFFFF;
 }
-section.header div.topnav {
-  Display: flex;
-  Justify-Content: flex-end;
-  flex-direction: auto;
-  Align-items: auto;
+@media (max-width: 1600px) {
+  section.header div.topnav {
+    Display: flex;
+    Justify-Content: flex-end;
+    flex-direction: auto;
+    Align-items: auto;
+  }
+  section.header div.topnav div.funbuslarge {
+    width: 55%;
+    margin-left: 5%;
+  }
+  section.header div.topnav div.funbuslarge p {
+    width: 55;
+    height: auto;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    font-size: 6rem;
+    font-family: 'Indie Flower';
+  }
+  section.header div.topnav nav {
+    Display: flex;
+    Justify-Content: space-evenly;
+    flex-direction: auto;
+    Align-items: center;
+    width: 50%;
+    height: 164px;
+  }
+  section.header div.topnav nav a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+  }
 }
-@media (max-width: 500px) {
+@media (max-width: 1600px) and (max-width: 500px) {
   section.header div.topnav {
     Display: flex;
     Justify-Content: center;
@@ -18,36 +52,14 @@ section.header div.topnav {
     height: 110px;
   }
 }
-section.header div.topnav div.funbuslarge {
-  width: 55%;
-  margin-left: 5%;
-}
-section.header div.topnav div.funbuslarge p {
-  width: 55;
-  height: auto;
-  margin-top: 5%;
-  margin-right: 10%;
-  margin-bottom: 0%;
-  margin-left: 0%;
-  font-size: 6rem;
-  font-family: 'Indie Flower';
-}
-@media (max-width: 500px) {
+@media (max-width: 1600px) and (max-width: 500px) {
   section.header div.topnav div.funbuslarge p {
     text-align: center;
     font-size: 2.8rem;
     font-family: 'Indie Flower';
   }
 }
-section.header div.topnav nav {
-  Display: flex;
-  Justify-Content: space-evenly;
-  flex-direction: auto;
-  Align-items: center;
-  width: 50%;
-  height: 164px;
-}
-@media (max-width: 500px) {
+@media (max-width: 1600px) and (max-width: 500px) {
   section.header div.topnav nav {
     margin-top: 2%;
     margin-right: 0%;
@@ -57,38 +69,347 @@ section.header div.topnav nav {
     height: auto;
   }
 }
-section.header div.topnav nav a {
-  text-decoration: none;
-  font-size: 2rem;
-  color: black;
-}
-@media (max-width: 500px) {
+@media (max-width: 1600px) and (max-width: 500px) {
   section.header div.topnav nav a {
     font-size: 1.8rem;
     font-family: auto;
   }
 }
-div.banner {
-  Display: flex;
-  Justify-Content: center;
-  flex-direction: auto;
-  Align-items: auto;
-  border-top: 1px dashed black;
+@assignment Dimensions {
+  section.header div.topnav {
+    Display: flex;
+    Justify-Content: flex-end;
+    flex-direction: auto;
+    Align-items: auto;
+  }
+  @media (max-width: 500px) {
+    section.header div.topnav {
+      Display: flex;
+      Justify-Content: center;
+      flex-direction: column;
+      Align-items: center;
+      width: 55;
+      height: 110px;
+    }
+  }
+  section.header div.topnav div.funbuslarge {
+    width: 55%;
+    margin-left: 5%;
+  }
+  section.header div.topnav div.funbuslarge p {
+    width: 55;
+    height: auto;
+    margin-top: 5%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    font-size: 6rem;
+    font-family: 'Indie Flower';
+  }
+  @media (max-width: 500px) {
+    section.header div.topnav div.funbuslarge p {
+      text-align: center;
+      font-size: 2.8rem;
+      font-family: 'Indie Flower';
+    }
+  }
+  section.header div.topnav nav {
+    Display: flex;
+    Justify-Content: space-evenly;
+    flex-direction: auto;
+    Align-items: center;
+    width: 50%;
+    height: 164px;
+  }
+  @media (max-width: 500px) {
+    section.header div.topnav nav {
+      margin-top: 2%;
+      margin-right: 0%;
+      margin-bottom: -5%;
+      margin-left: 0%;
+      width: 90%;
+      height: auto;
+    }
+  }
+  section.header div.topnav nav a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+  }
+  @media (max-width: 500px) {
+    section.header div.topnav nav a {
+      font-size: 1.8rem;
+      font-family: auto;
+    }
+  }
 }
-div.banner img {
-  width: 90%;
-  height: 90%;
+.footer {
+  width: 100%;
+  border-top: 2px dashed silver;
+  background: #FFEBCD;
 }
-section.welcome {
-  width: 55%;
-  margin-left: 5%;
+.footer p {
+  text-align: center;
+  color: #212529;
+  font-size: 1.6rem;
+  padding: 20px;
 }
-section.welcome div.welcomecontent h2 {
-  font-size: 4rem;
-  font-family: 'Indie Flower';
+@media (max-width: 1000px) {
+  .container .content-section {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: 4%;
+    margin-left: 0%;
+  }
+  .container .content-section .text-content {
+    width: 88%;
+    padding-right: 1%;
+    color: #212529;
+  }
+  .container .content-section .img-content {
+    width: 48%;
+    padding-left: 1%;
+    margin-top: -40%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+  }
+  .container .content-section .img-content img {
+    border-radius: 10px;
+    margin-top: -30%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+  }
+  .container .inverse-content {
+    padding-bottom: 30px;
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: -7%;
+    margin-left: 0%;
+    color: #212529;
+  }
+  .container .inverse-content .text-content2 {
+    padding-left: 1%;
+    padding-right: 0;
+    color: #212529;
+  }
+  .container .inverse-content .img-content2 {
+    padding-right: 1%;
+    padding-left: 0;
+  }
+  .container .content-destination {
+    width: 75%;
+    color: #212529;
+  }
+  .container .content-destination img {
+    border-radius: 10px;
+  }
+  .container .content-pick {
+    padding-top: 30px;
+    border-top: 2px dashed #C0C0C0;
+    display: flex;
+    justify-content: space-between;
+    color: #212529;
+  }
+  .container .content-pick .destination {
+    width: 50%;
+    margin-bottom: 30px;
+    color: #212529;
+  }
 }
-@media (max-width: 500px) {
-  section.welcome div.welcomecontent h2 {
+@media (max-width: 1600px) {
+  .container div.banner {
+    Display: flex;
+    Justify-Content: center;
+    flex-direction: auto;
+    Align-items: auto;
+    border-top: 1px dashed #C0C0C0;
+  }
+  .container div.banner img {
+    width: 90%;
+    height: 90%;
+  }
+  .container section.welcome {
+    width: 55%;
+    margin-left: 5%;
+  }
+  .container section.welcome div.welcomecontent h2 {
+    font-size: 4rem;
+    font-family: 'Indie Flower';
+    color: #212529;
+  }
+  .container section.welcome div.welcomecontent p {
+    color: #212529;
+    font-size: 2rem;
+    margin-top: 0%;
+    margin-right: -64%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    padding-bottom: 5%;
+    border-bottom: 1px dashed black;
+  }
+  .container section.content-section div.text-content {
+    color: #212529;
+    Display: flex;
+    Justify-Content: space-evenly;
+    flex-direction: column;
+    Align-items: auto;
+    margin-top: 0%;
+    margin-right: 3%;
+    margin-bottom: 0%;
+    margin-left: 5%;
+  }
+  .container section.content-section div.text-content h2 {
+    color: #212529;
+    font-size: 4rem;
+    font-family: 'Indie Flower';
+  }
+  .container section.content-section div.text-content p {
+    color: #212529;
+    font-size: 2rem;
+    margin-top: 0%;
+    margin-right: 50%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+  }
+  .container section.content-section div.img-content {
+    Justify-Content: flex-end;
+    flex-direction: column;
+    margin-top: -15%;
+    margin-right: 6%;
+    margin-bottom: 0%;
+    margin-left: 50%;
+    Display: flex;
+    Justify-Content: space-evenly;
+    flex-direction: auto;
+    Align-items: auto;
+  }
+  .container section.content-section div.img-content img {
+    border-radius: 50px;
+  }
+  .container section.inverse-content {
+    color: #212529;
+  }
+  .container section.inverse-content div.text-content2 {
+    color: #212529;
+    width: 45%;
+    height: auto;
+    margin-top: -20%;
+    margin-right: auto;
+    margin-bottom: 0%;
+    margin-left: 50%;
+  }
+  .container section.inverse-content div.text-content2 h2 {
+    color: #212529;
+    width: 45%;
+    height: auto;
+    font-size: 4rem;
+    font-family: 'Indie Flower';
+  }
+  .container section.inverse-content div.text-content2 p {
+    color: #212529;
+    font-size: 2rem;
+  }
+  .container section.inverse-content div.img-content2 {
+    Display: flex;
+    Justify-Content: flex-end;
+    flex-direction: row;
+    Align-items: auto;
+    margin-top: 2%;
+    margin-right: 50%;
+    margin-bottom: -15%;
+    margin-left: 4%;
+  }
+  .container section.inverse-content div.img-content2 img {
+    border-radius: 50px;
+    width: 95%;
+    height: 300px;
+  }
+  .container div.border2 {
+    border-bottom: 1px dashed black;
+    width: 90%;
+    height: 100px;
+    margin-top: 0%;
+    margin-right: 3%;
+    margin-bottom: 0%;
+    margin-left: 5%;
+  }
+  .container section.content-destination {
+    color: #212529;
+    Display: flex;
+    Justify-Content: center;
+    flex-direction: column;
+    Align-items: center;
+    margin-top: 0%;
+    margin-right: 1%;
+    margin-bottom: 0%;
+    margin-left: 5%;
+    border-bottom: 1px dashed black;
+    width: 85%;
+    height: 100%;
+    padding-bottom: 35px;
+  }
+  .container section.content-destination h2 {
+    color: #212529;
+    font-size: 4rem;
+    font-family: 'Indie Flower';
+  }
+  .container section.content-destination p {
+    color: #212529;
+    font-size: 2rem;
+    margin-top: -2%;
+    margin-right: 13%;
+    margin-bottom: 1%;
+    margin-left: 13%;
+  }
+  .container section.content-destination img {
+    border-radius: 50px;
+    width: 75%;
+    height: 300px;
+  }
+  .container section.content-pick {
+    color: #212529;
+    Display: flex;
+    Justify-Content: space-evenly;
+    flex-direction: row;
+    Align-items: center;
+    margin-top: 0%;
+    margin-right: 13%;
+    margin-bottom: 0%;
+    margin-left: 13%;
+  }
+  .container section.content-pick h4 {
+    color: #212529;
+    font-size: 2.8rem;
+    font-family: 'Indie Flower';
+  }
+  .container section.content-pick p {
+    font-size: 2rem;
+    text-align: left margin-top: -2%; margin-right: 13%; margin-bottom: 5%; margin-left: 0%;;
+  }
+  .container section.content-pick div.btn {
+    background-color: #17A2B8;
+    border-radius: 50px;
+    width: 70%;
+    height: 35px;
+    margin-top: 2%;
+    margin-right: 23%;
+    margin-bottom: 3%;
+    margin-left: 1%;
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'Times new roman';
+    padding-top: 15px;
+  }
+}
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.welcome div.welcomecontent h2 {
     margin-top: 7%;
     margin-right: -75%;
     margin-bottom: auto;
@@ -97,17 +418,8 @@ section.welcome div.welcomecontent h2 {
     font-family: 'Indie Flower';
   }
 }
-section.welcome div.welcomecontent p {
-  font-size: 2rem;
-  margin-top: 0%;
-  margin-right: -64%;
-  margin-bottom: 0%;
-  margin-left: 0%;
-  padding-bottom: 5%;
-  border-bottom: 1px dashed black;
-}
-@media (max-width: 500px) {
-  section.welcome div.welcomecontent p {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.welcome div.welcomecontent p {
     margin-top: 3%;
     margin-right: -70%;
     margin-bottom: auto;
@@ -116,35 +428,14 @@ section.welcome div.welcomecontent p {
     font-family: auto;
   }
 }
-section.content-section div.text-content {
-  Display: flex;
-  Justify-Content: space-evenly;
-  flex-direction: column;
-  Align-items: auto;
-  margin-top: 0%;
-  margin-right: 3%;
-  margin-bottom: 0%;
-  margin-left: 5%;
-}
-section.content-section div.text-content h2 {
-  font-size: 4rem;
-  font-family: 'Indie Flower';
-}
-@media (max-width: 500px) {
-  section.content-section div.text-content h2 {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-section div.text-content h2 {
     font-size: 2.5rem;
     font-family: 'Indie Flower';
   }
 }
-section.content-section div.text-content p {
-  font-size: 2rem;
-  margin-top: 0%;
-  margin-right: 50%;
-  margin-bottom: 0%;
-  margin-left: 0%;
-}
-@media (max-width: 500px) {
-  section.content-section div.text-content p {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-section div.text-content p {
     margin-top: -2%;
     margin-right: 2%;
     margin-bottom: auto;
@@ -153,60 +444,40 @@ section.content-section div.text-content p {
     font-family: auto;
   }
 }
-section.content-section div.img-content {
-  Justify-Content: flex-end;
-  flex-direction: column;
-  margin-top: -15%;
-  margin-right: 6%;
-  margin-bottom: 0%;
-  margin-left: 50%;
-  Display: flex;
-  Justify-Content: space-evenly;
-  flex-direction: auto;
-  Align-items: auto;
-}
-@media (max-width: 500px) {
-  section.content-section div.img-content {
-    margin-top: 3%;
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-section div.img-content {
+    margin-top: 20%;
     margin-right: 5%;
     margin-bottom: -27%;
     margin-left: 5%;
   }
 }
-section.content-section div.img-content img {
-  border-radius: 50px;
-}
-@media (max-width: 500px) {
-  section.content-section div.img-content img {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-section div.img-content img {
     border-radius: 15px;
+    width: 190%;
   }
 }
-section.inverse-content div.text-content2 {
-  width: 45%;
-  height: auto;
-  margin-top: -20%;
-  margin-right: auto;
-  margin-bottom: 0%;
-  margin-left: 50%;
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.inverse-content {
+    margin-top: 0%;
+    margin-right: 0%;
+    margin-bottom: -70%;
+    margin-left: 0%;
+  }
 }
-@media (max-width: 500px) {
-  section.inverse-content div.text-content2 {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.inverse-content div.text-content2 {
     width: 95%;
     height: auto;
-    margin-top: -172%;
+    margin-top: -122%;
     margin-right: 20%;
     margin-bottom: 50%;
     margin-left: 5%;
   }
 }
-section.inverse-content div.text-content2 h2 {
-  width: 45%;
-  height: auto;
-  font-size: 4rem;
-  font-family: 'Indie Flower';
-}
-@media (max-width: 500px) {
-  section.inverse-content div.text-content2 h2 {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.inverse-content div.text-content2 h2 {
     width: 95%;
     height: auto;
     margin-top: -90%;
@@ -217,79 +488,36 @@ section.inverse-content div.text-content2 h2 {
     font-family: 'Indie Flower';
   }
 }
-section.inverse-content div.text-content2 p {
-  font-size: 2rem;
-}
-@media (max-width: 500px) {
-  section.inverse-content div.text-content2 p {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.inverse-content div.text-content2 p {
     font-size: 1.8rem;
     font-family: auto;
+    margin-top: 0%;
+    margin-right: -20%;
+    margin-bottom: 0%;
+    margin-left: 0%;
   }
 }
-section.inverse-content div.img-content2 {
-  Justify-Content: flex-end;
-  flex-direction: row;
-  margin-top: 2%;
-  margin-right: 50%;
-  margin-bottom: -15%;
-  margin-left: 4%;
-  Display: flex;
-  Justify-Content: space-evenly;
-  flex-direction: auto;
-  Align-items: auto;
-}
-@media (max-width: 500px) {
-  section.inverse-content div.img-content2 {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.inverse-content div.img-content2 {
     width: 100%;
     height: auto;
-    margin-top: 70%;
+    margin-top: 100%;
     margin-right: 10%;
-    margin-bottom: 50%;
+    margin-bottom: 40%;
     margin-left: 2%;
     padding-bottom: 90px;
   }
 }
-section.inverse-content div.img-content2 img {
-  border-radius: 50px;
-  width: 95%;
-  height: 300px;
-}
-@media (max-width: 500px) {
-  section.inverse-content div.img-content2 img {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.inverse-content div.img-content2 img {
     width: 93%;
     height: 300px;
     border-radius: 15px;
   }
 }
-div.border2 {
-  border-bottom: 1px dashed black;
-  width: 90%;
-  height: 100px;
-  margin-top: 0%;
-  margin-right: 3%;
-  margin-bottom: 0%;
-  margin-left: 5%;
-}
-section.content-destination {
-  Display: flex;
-  Justify-Content: center;
-  flex-direction: column;
-  Align-items: center;
-  margin-top: 0%;
-  margin-right: 1%;
-  margin-bottom: 0%;
-  margin-left: 5%;
-  border-bottom: 1px dashed black;
-  width: 85%;
-  height: 100%;
-  padding-bottom: 35px;
-}
-section.content-destination h2 {
-  font-size: 4rem;
-  font-family: 'Indie Flower';
-}
-@media (max-width: 500px) {
-  section.content-destination h2 {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-destination h2 {
     margin-top: 6%;
     margin-right: 0%;
     margin-bottom: 4%;
@@ -298,15 +526,8 @@ section.content-destination h2 {
     font-family: 'Indie Flower';
   }
 }
-section.content-destination p {
-  font-size: 2rem;
-  margin-top: -2%;
-  margin-right: 13%;
-  margin-bottom: 1%;
-  margin-left: 13%;
-}
-@media (max-width: 500px) {
-  section.content-destination p {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-destination p {
     margin-top: 0%;
     margin-right: 0%;
     margin-bottom: 5%;
@@ -315,13 +536,8 @@ section.content-destination p {
     font-family: auto;
   }
 }
-section.content-destination img {
-  border-radius: 50px;
-  width: 75%;
-  height: 300px;
-}
-@media (max-width: 500px) {
-  section.content-destination img {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-destination img {
     width: 110%;
     height: 180px;
     margin-top: 0%;
@@ -331,30 +547,16 @@ section.content-destination img {
     border-radius: 15px;
   }
 }
-section.content-pick {
-  Display: flex;
-  Justify-Content: space-evenly;
-  flex-direction: row;
-  Align-items: center;
-  margin-top: 0%;
-  margin-right: 13%;
-  margin-bottom: 0%;
-  margin-left: 13%;
-}
-@media (max-width: 500px) {
-  section.content-pick {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-pick {
     Display: flex;
     Justify-Content: space-evenly;
     flex-direction: column;
     Align-items: center;
   }
 }
-section.content-pick h4 {
-  font-size: 2.8rem;
-  font-family: 'Indie Flower';
-}
-@media (max-width: 500px) {
-  section.content-pick h4 {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-pick h4 {
     margin-top: 6%;
     margin-right: 0%;
     margin-bottom: 14%;
@@ -363,12 +565,8 @@ section.content-pick h4 {
     font-family: 'Indie Flower';
   }
 }
-section.content-pick p {
-  font-size: 2rem;
-  text-align: left margin-top: -2%; margin-right: 13%; margin-bottom: 5%; margin-left: 0%;;
-}
-@media (max-width: 500px) {
-  section.content-pick p {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-pick p {
     margin-top: -10%;
     margin-right: 0%;
     margin-bottom: 5%;
@@ -377,23 +575,8 @@ section.content-pick p {
     font-family: auto;
   }
 }
-section.content-pick div.btn {
-  background-color: darkcyan;
-  border-radius: 50px;
-  width: 70%;
-  height: 35px;
-  margin-top: 2%;
-  margin-right: 23%;
-  margin-bottom: 3%;
-  margin-left: 1%;
-  text-align: center;
-  color: white;
-  font-size: 2.5rem;
-  font-family: 'Times new roman';
-  padding-top: 15px;
-}
-@media (max-width: 500px) {
-  section.content-pick div.btn {
+@media (max-width: 1600px) and (max-width: 500px) {
+  .container section.content-pick div.btn {
     width: 100%;
     height: 40px;
     margin-top: 0%;
@@ -403,17 +586,4 @@ section.content-pick div.btn {
     font-size: 1.9rem;
     font-family: 'Times new roman';
   }
-}
-footer.footer {
-  border-top: 1px dashed black;
-  text-align: center;
-  background-color: wheat;
-  font-size: 1.5rem;
-  font-family: 'Times new roman';
-  width: auto;
-  height: 65px;
-  margin-top: 2%;
-  margin-right: 0%;
-  margin-bottom: 1%;
-  margin-left: 0%;
 }

@@ -1,2 +1,85 @@
 // Navigation Styles here
+@media @mycomputer {
+    section.header {
+        div.topnav {
+            .displayFlex(flex-end, auto, auto);
+                @media @mobile {
+                    .displayFlex(center, column, center);
+                    .widthHeight(55, 110px);
+                }
+            div.funbuslarge {
+                .defaultMarginLeft();
+                p {
+                    @media @mobile {
+                    text-align: center;
+                    .fontsizefamily (2.8rem, 'Indie Flower');
+                    }
+                    .widthHeight(55, auto);
+                    .margintoprightbottomleft(5%, 10%, 0%, 0%);
+                    .fontsizefamily (6rem, 'Indie Flower');
+            }
+        }
+            nav {
+                .displayFlex(space-evenly, auto, center);
+                .widthHeight(50%, 164px);
+    
+                @media @mobile {
+                    .margintoprightbottomleft(2%, 0%, -5%, 0%);
+                    .widthHeight(90%, auto);
+                }
+                a {
+                    text-decoration: none;
+                    .psize1();
+                    color: black;
+    
+                @media @mobile {
+                    .fontsizefamily (1.8rem, auto);
+                    }
+    
+                }
+            }    
+        }
+    }
+}
+@assignmentDimensions{
+section.header {
+    div.topnav {
+        .displayFlex(flex-end, auto, auto);
+            @media @mobile {
+                .displayFlex(center, column, center);
+                .widthHeight(55, 110px);
+            }
+        div.funbuslarge {
+            .defaultMarginLeft();
+            p {
+                @media @mobile {
+                text-align: center;
+                .fontsizefamily (2.8rem, 'Indie Flower');
+                }
+                .widthHeight(55, auto);
+                .margintoprightbottomleft(5%, 10%, 0%, 0%);
+                .fontsizefamily (6rem, 'Indie Flower');
+        }
+    }
+        nav {
+            .displayFlex(space-evenly, auto, center);
+            .widthHeight(50%, 164px);
 
+            @media @mobile {
+                .margintoprightbottomleft(2%, 0%, -5%, 0%);
+                .widthHeight(90%, auto);
+            }
+            a {
+                text-decoration: none;
+                .psize1();
+                color: black;
+
+            @media @mobile {
+                .fontsizefamily (1.8rem, auto);
+                }
+
+            }
+        }    
+    }
+}
+}

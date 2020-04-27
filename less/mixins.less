@@ -1,1 +1,42 @@
-// Mixins in here
+// Mixins in here.displayFlex(@justify, @direction, @align) {
+   
+    @mobile: ~"(max-width: 500px)";
+
+    @mycomputer: ~"(max-width: 1600px)";
+
+    @assignmentDimensions: ~"(max-width: 1000px)";
+
+    .displayFlex(@justify, @direction, @align) {
+        Display: flex;
+        Justify-Content: @justify;  
+        flex-direction: @direction;
+        Align-items: @align;    
+    }           
+    
+    .widthHeight(@width, @height) {
+        width: @width;
+        height: @height;
+    }
+    
+    .margintoprightbottomleft(@top, @right, @bottom, @left){
+        margin-top: @top;
+        margin-right: @right;
+        margin-bottom: @bottom;
+        margin-left: @left;
+    }
+    
+    
+    .fontsizefamily (@size, @family) {
+        font-size: @size;
+        font-family: @family;
+    }
+    
+    .defaultMarginLeft() {
+            width: 55%;
+            margin-left: 5%;
+    }
+    
+    .psize1() {
+    font-size: 2rem;
+    }
+  
